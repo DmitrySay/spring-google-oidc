@@ -1,0 +1,42 @@
+
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+           google:
+             client-id:  <your google id>
+             client-secret: <your google secret>
+
+
+
+
+# <td><a href="/oauth2/authorization/google">Google</a></td>
+
+# https://accounts.google.com/signin/oauth/oauthchooseaccount?
+#  response_type=code
+#  &client_id=+++
+#  &scope=openid%20profile%20email
+#  &state=+++
+#  &redirect_uri=http://localhost/login/oauth2/code/google
+
+
+
+
+
+#  GOOGLE {
+#
+#  @Override
+#  public Builder getBuilder(String registrationId) {
+#  ClientRegistration.Builder builder = getBuilder(registrationId,
+#  ClientAuthenticationMethod.BASIC, DEFAULT_REDIRECT_URL);
+#  builder.scope("openid", "profile", "email");
+#  builder.authorizationUri("https://accounts.google.com/o/oauth2/v2/auth");
+#  builder.tokenUri("https://www.googleapis.com/oauth2/v4/token");
+#  builder.jwkSetUri("https://www.googleapis.com/oauth2/v3/certs");
+#  builder.userInfoUri("https://www.googleapis.com/oauth2/v3/userinfo");
+#  builder.userNameAttributeName(IdTokenClaimNames.SUB);
+#  builder.clientName("Google");
+#  return builder;
+#}
